@@ -70,14 +70,14 @@ module DnsZoneHelper
         end
 
       when Hash
-        c[:type] = type
+        c[:type] = type.upcase
 
         record = []
         m.each do |k|
           record << c[k.to_sym]
         end
 
-        records << record.join("\t")
+        records << record.join(' ')
       end
     end
   end
