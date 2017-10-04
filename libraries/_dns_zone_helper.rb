@@ -45,6 +45,9 @@ module DnsZoneHelper
       ],
       "cname" => [
         :name, :ttl, :type, :host
+      ],
+      "srv" => [
+        :name, :ttl, :type, :priority, :weight, :port, :host
       ]
     }
 
