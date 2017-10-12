@@ -62,7 +62,7 @@ module DnsZoneHelper
         end
       end
 
-      records.join($/)
+      records
     end
 
     def add_record(records, type, m, c)

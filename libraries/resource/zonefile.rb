@@ -9,7 +9,7 @@ class ChefDnsZone
       property :owner, String
       property :group, String
       property :zone_hash, Hash
-      property :config, default: lazy { DnsZoneHelper::ConfigGenerator.generate_from_hash(zone_hash) }
+      property :config, default: lazy { DnsZoneHelper::ConfigGenerator.generate_from_hash(zone_hash).join($/) }
       property :path, String
     end
   end
